@@ -344,7 +344,7 @@
 		</section>
 
 		<!-- contact -->
-		<!-- <section id="section-contact" class="section appear clearfix">
+		<section id="section-contact" class="section appear clearfix">
 			<div class="container">
 				
 				<div class="row mar-bot40">
@@ -361,7 +361,7 @@
 							<div id="sendmessage">
 								 Tu mensaje ha sido enviado. Gracias!
 							</div>
-							<form action="contact/contact.php" method="post" role="form" class="contactForm">
+							<form name="contact" class="contactForm" netlify>
 							  <div class="form-group">
 								<label for="name">Tu Nombre</label>
 								<input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
@@ -383,7 +383,10 @@
 								<div class="validation"></div>
 							  </div>
 							  
-							  <button type="submit" class="btn btn-theme pull-left">Enviar Mensaje</button>
+							  <button type="submit" netlify-honeypot="bot-field" class="btn btn-theme pull-left">Enviar Mensaje</button>
+							  <p style="display:none;">
+								<label>Don’t fill this out: <input name="bot-field"></label>
+							  </p>
 							</form>
 
 						</div>
@@ -391,7 +394,7 @@
 				</div>
 				
 			</div>
-		</section> -->
+		</section>
 		<!-- map -->
 	
 		
